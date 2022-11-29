@@ -48,10 +48,10 @@ fecha_inicio_incidencia_cambio_timestamp = (datetime(2022, fecha_inicio_incidenc
 if (fecha_inicio_incidencia_cambio_timestamp < fecha_cambio_hora_1_timestamp):
     offset_1 = -3600 
 
-if ((fecha_inicio_incidencia_cambio_timestamp > fecha_cambio_hora_1_timestamp) and (fecha_inicio_incidencia_cambio_timestamp < fecha_cambio_hora_2_timestamp)):
+elif ((fecha_inicio_incidencia_cambio_timestamp > fecha_cambio_hora_1_timestamp) and (fecha_inicio_incidencia_cambio_timestamp < fecha_cambio_hora_2_timestamp)):
   offset_1 = -7200
 
-if (fecha_cambio_hora_2_timestamp < fecha_inicio_incidencia_cambio_timestamp):
+else (fecha_cambio_hora_2_timestamp < fecha_inicio_incidencia_cambio_timestamp):
   offset_1 = -3600  
 
 fecha_fin_incidencia_cambio_timestamp = (datetime(2022, fecha_fin_incidencia.month, fecha_fin_incidencia.day, fecha_fin_incidencia.hour, fecha_fin_incidencia.minute, fecha_fin_incidencia.second).timestamp())*1000 
@@ -59,10 +59,10 @@ fecha_fin_incidencia_cambio_timestamp = (datetime(2022, fecha_fin_incidencia.mon
 if (fecha_fin_incidencia_cambio_timestamp < fecha_cambio_hora_1_timestamp):
     offset_2 = -3600 
 
-if ((fecha_fin_incidencia_cambio_timestamp > fecha_cambio_hora_1_timestamp) and (fecha_fin_incidencia_cambio_timestamp < fecha_cambio_hora_2_timestamp)):
+elif ((fecha_fin_incidencia_cambio_timestamp > fecha_cambio_hora_1_timestamp) and (fecha_fin_incidencia_cambio_timestamp < fecha_cambio_hora_2_timestamp)):
   offset_2 = -7200
 
-if (fecha_cambio_hora_2_timestamp < fecha_fin_incidencia_cambio_timestamp):
+else (fecha_cambio_hora_2_timestamp < fecha_fin_incidencia_cambio_timestamp):
   offset_2 = -3600  
   
   # Transformacion de variables de entrada
